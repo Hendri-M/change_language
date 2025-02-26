@@ -1,0 +1,12 @@
+{
+    "description": "Halo!\nSaat ini Anda sedang menggunakan bahasa Indonesia.",
+    "accept": "Ya, lanjutkan",
+    "decline": "Tidak, batalkan",
+    "appBar": "Pilih Bahasa App",
+    "centerText": "Ini adalah halaman lain yang menampilkan bahasa yang dipilih di halaman utama.",
+    "backHome": "Kembali ke Beranda",
+    "nextButton": "Lanjut ke Halaman Lain",
+    "settings": "Pengaturan Aplikasi",
+    "settingBtn": "Pengaturan",
+    "changeLanguage": "Pilih Bahasa Lain"
+}

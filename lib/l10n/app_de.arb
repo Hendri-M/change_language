@@ -1,0 +1,12 @@
+{
+    "description": "Hallo, \nSie verwenden derzeit die deutsche Sprache.",
+    "accept": "Ja, fortfahren",
+    "decline": "Nein, abbrechen",
+    "appBar": "App-Sprache Auswählen",
+    "centerText": "Dies ist eine weitere Seite, die die auf der Startseite ausgewählte Sprache anzeigt.",
+    "backHome": "Zurück zur Startseite",
+    "nextButton": "Zu anderen Seiten gehen",
+    "settings": "App-Einstellungen",
+    "settingBtn": "Einstellungen",
+    "changeLanguage": "Andere Sprache auswählen"
+}

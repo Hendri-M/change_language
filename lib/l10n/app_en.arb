@@ -1,0 +1,12 @@
+{
+    "description": "Hello there,\nYou are currently using the English language.",
+    "accept": "Yes, proceed",
+    "decline": "No, cancel",
+    "appBar": "Select App Language",
+    "centerText": "This is another page displaying the language selected on the home page.",
+    "backHome": "Return to Home",
+    "nextButton": "Go to Other Pages",
+    "settings": "Application Settings",
+    "settingBtn": "Settings",
+    "changeLanguage": "Select a Different Language"
+}

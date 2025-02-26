@@ -1,0 +1,12 @@
+{
+    "description": "¡Hola,\nEstás utilizando el idioma español.",
+    "accept": "Sí, continuar",
+    "decline": "No, cancelar",
+    "appBar": "Seleccione el idioma de la aplicación",
+    "centerText": "Esta es otra página que muestra el idioma seleccionado en la página de inicio.",
+    "backHome": "Volver al inicio",
+    "nextButton": "Ir a otras páginas",
+    "settings": "Configuración de la aplicación",
+    "settingBtn": "Ajustes",
+    "changeLanguage": "Seleccionar otro idioma"
+}

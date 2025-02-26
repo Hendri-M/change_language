@@ -1,0 +1,12 @@
+{
+    "description": "안녕하세요,\n현재 한국어를 사용 중입니다.",
+    "accept": "예, 계속하기",
+    "decline": "아니요, 취소하기",
+    "appBar": "앱 언어 선택",
+    "centerText": "이 페이지는 홈 페이지에서 선택한 언어를 표시합니다.",
+    "backHome": "홈으로 돌아가기",
+    "nextButton": "다른 페이지로 이동",
+    "settings": "앱 설정",
+    "settingBtn": "설정",
+    "changeLanguage": "다른 언어 선택"
+}
