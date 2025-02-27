@@ -17,61 +17,60 @@ class SettingView extends GetView<SettingController> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
         child: SafeArea(
-          child: GridView(
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              childAspectRatio: 6 / 4,
-            ),
-            children: controller.lang.asMap().entries.map((entry) {
-              var item = entry.value;
-              return Ink(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  border: Border.all(
-                      color: item['id'] == controller.selectedLang.value
-                          ? Colors.green
-                          : Colors.blue,
-                      width:
-                          item['id'] == controller.selectedLang.value ? 2 : 1),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: InkWell(
-                  onTap: () {
-                    controller.changeLanguage(item['text'] as String);
-                  },
-                  borderRadius: BorderRadius.circular(10),
-                  splashColor: Colors.blue[300],
-                  child: Stack(alignment: Alignment.center, children: [
-                    item['id'] == controller.selectedLang.value
-                        ? const Align(
-                            alignment: Alignment.topRight,
-                            child: Padding(
-                              padding: EdgeInsets.only(right: 10, top: 5),
-                              child: Icon(
-                                Icons.check_circle_sharp,
-                                color: Colors.green,
-                                size: 25,
-                              ),
-                            ),
-                          )
-                        : const SizedBox(),
-                    Column(
-                      children: [
-                        Image(
-                          image: item['image'] as ImageProvider,
-                          width: 80,
-                          height: 80,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Wrap(
+                  spacing: MediaQuery.of(context).size.width / 10,
+                  runSpacing: MediaQuery.of(context).size.width / 10,
+                  children: controller.lang.asMap().entries.map((item) {
+                    return Ink(
+                      width: 150,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        border: Border.all(
+                            color: item.value['id'] ==
+                                    controller.selectedLang.value
+                                ? Colors.green
+                                : Colors.blue,
+                            width: item.value['id'] ==
+                                    controller.selectedLang.value
+                                ? 2.5
+                                : 1.5),
+                        image: DecorationImage(
+                            image: item.value['image'] as ImageProvider,
+                            filterQuality: FilterQuality.low,
+                            fit: BoxFit.contain),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          controller
+                              .changeLanguage(item.value['text'] as String);
+                        },
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 5),
+                            child: item.value['id'] ==
+                                    controller.selectedLang.value
+                                ? const Icon(Icons.check_circle_rounded,
+                                    color: Colors.green, size: 25)
+                                : const SizedBox(),
+                          ),
                         ),
-                        Text(item['text'] as String)
-                      ],
-                    ),
-                  ]),
+                      ),
+                    );
+                  }).toList(),
                 ),
-              );
-            }).toList(),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                context.l10n.settingOther,
+                style: const TextStyle(fontSize: 25),
+              )
+            ],
           ),
         ),
       ),

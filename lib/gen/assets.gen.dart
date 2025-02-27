@@ -12,29 +12,18 @@ import 'package:flutter/widgets.dart';
 class Assets {
   const Assets._();
 
-  static const AssetGenImage flag = AssetGenImage('assets/flag.png');
-  static const AssetGenImage german = AssetGenImage('assets/german.png');
+  static const AssetGenImage germany = AssetGenImage('assets/germany.png');
+  static const AssetGenImage indonesia = AssetGenImage('assets/indonesia.png');
   static const AssetGenImage japan = AssetGenImage('assets/japan.png');
   static const AssetGenImage rusia = AssetGenImage('assets/rusia.png');
   static const AssetGenImage southKorea =
       AssetGenImage('assets/south-korea.png');
-  static const AssetGenImage spainCircle =
-      AssetGenImage('assets/spain-circle.png');
-  static const AssetGenImage spain = AssetGenImage('assets/spain.png');
   static const AssetGenImage unitedKingdom =
       AssetGenImage('assets/united-kingdom.png');
 
   /// List of all assets
-  static List<AssetGenImage> get values => [
-        flag,
-        german,
-        japan,
-        rusia,
-        southKorea,
-        spainCircle,
-        spain,
-        unitedKingdom
-      ];
+  static List<AssetGenImage> get values =>
+      [germany, indonesia, japan, rusia, southKorea, unitedKingdom];
 }
 
 class AssetGenImage {

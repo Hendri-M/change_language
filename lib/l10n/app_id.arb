@@ -8,5 +8,7 @@
     "nextButton": "Lanjut ke Halaman Lain",
     "settings": "Pengaturan Aplikasi",
     "settingBtn": "Pengaturan",
+    "settingOther": "Pengaturan Lainnya",
+    "clearPref": "Hapus Preferensi",
     "changeLanguage": "Pilih Bahasa Lain"
 }

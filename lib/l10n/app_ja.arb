@@ -8,5 +8,7 @@
     "nextButton": "他のページに進む",
     "settings": "アプリ設定",
     "settingBtn": "設定",
+    "settingOther": "その他の設定",
+    "clearPref": "プリファレンスをクリアする",
     "changeLanguage": "別の言語を選択する"
 }

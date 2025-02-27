@@ -8,5 +8,7 @@
     "nextButton": "Ir a otras páginas",
     "settings": "Configuración de la aplicación",
     "settingBtn": "Ajustes",
+    "settingOther": "Otras Configuraciones",
+    "clearPref": "Borrar preferencias",
     "changeLanguage": "Seleccionar otro idioma"
 }

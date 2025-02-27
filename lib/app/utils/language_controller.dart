@@ -18,11 +18,15 @@ class LanguageController extends GetxController {
       "image": AssetImage(Assets.southKorea.path)
     },
     {"id": "japan", "text": "Japan", "image": AssetImage(Assets.japan.path)},
-    {"id": "german", "text": "German", "image": AssetImage(Assets.german.path)},
+    {
+      "id": "german",
+      "text": "German",
+      "image": AssetImage(Assets.germany.path)
+    },
     {
       "id": "indonesia",
       "text": "Indonesia",
-      "image": AssetImage(Assets.flag.path)
+      "image": AssetImage(Assets.indonesia.path)
     },
   ];
 
@@ -42,6 +46,14 @@ class LanguageController extends GetxController {
         '${language.value.value.languageCode}_${language.value.value.countryCode}');
     SharedPref().saveString('langId', selectedLangId.value);
     Get.updateLocale(lang.value);
+    update();
+  }
+
+  void changeToDefault() async {
+    await SharedPref().clear();
+    selectedLangId.value = 'english';
+
+    Get.updateLocale(const Locale('en', 'US'));
     update();
   }
 

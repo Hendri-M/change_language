@@ -1,8 +1,10 @@
-# getx_change_language
+# GetX Change Language App
 
 A new Flutter project.
 
 ## Getting Started
+
+![](https://github.com/Hendri-M/gifs-only/blob/main/language.gif)
 
 This project is a starting point for a Flutter application.
 

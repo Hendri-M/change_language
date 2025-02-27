@@ -34,6 +34,12 @@ class HomeView extends GetView<HomeController> {
                         binding: SettingBinding());
                   },
                   child: Text(context.l10n.settingBtn),
+                ),
+                MenuItemButton(
+                  onPressed: () {
+                    controller.clearPref();
+                  },
+                  child: Text(context.l10n.clearPref),
                 )
               ],
             ),
@@ -53,7 +59,7 @@ class HomeView extends GetView<HomeController> {
                   width: 150,
                   height: 90,
                   child: Image(
-                    image: controller.getFlag(),
+                    image: controller.flagImage['image'] as ImageProvider,
                     fit: BoxFit.cover,
                   ),
                 ),

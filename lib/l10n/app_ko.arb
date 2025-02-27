@@ -8,5 +8,7 @@
     "nextButton": "다른 페이지로 이동",
     "settings": "앱 설정",
     "settingBtn": "설정",
+    "settingOther": "기타 설정",
+    "clearPref": "기본 설정 지우기",
     "changeLanguage": "다른 언어 선택"
 }
