@@ -1,6 +1,7 @@
 # GetX Change Language App
 
 Simple Change Language App using GetX State Management, Localization (l10n), Shared Preferences.
+Before running this application, first run this command ``flutter gen-l10n`` to generate language translations from files in the l10n folder.
 
 
 ```
