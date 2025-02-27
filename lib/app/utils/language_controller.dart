@@ -1,34 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_change_language/app/utils/language.dart';
+import 'package:getx_change_language/app/utils/language_list.dart';
 import 'package:getx_change_language/app/utils/shared_pref.dart';
-import 'package:getx_change_language/gen/assets.gen.dart';
 
 class LanguageController extends GetxController {
-  final langList = [
-    {
-      "id": "english",
-      "text": "English",
-      "image": AssetImage(Assets.unitedKingdom.path)
-    },
-    {"id": "russia", "text": "Russia", "image": AssetImage(Assets.rusia.path)},
-    {
-      "id": "korea",
-      "text": "Korea",
-      "image": AssetImage(Assets.southKorea.path)
-    },
-    {"id": "japan", "text": "Japan", "image": AssetImage(Assets.japan.path)},
-    {
-      "id": "german",
-      "text": "German",
-      "image": AssetImage(Assets.germany.path)
-    },
-    {
-      "id": "indonesia",
-      "text": "Indonesia",
-      "image": AssetImage(Assets.indonesia.path)
-    },
-  ];
+  final langList = languages;
 
   RxString selectedLangId = ''.obs;
 

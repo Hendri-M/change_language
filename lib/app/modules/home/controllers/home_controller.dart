@@ -12,11 +12,11 @@ class HomeController extends GetxController {
     final image = language.langList.firstWhere((it) => it['id'] == idLang);
 
     flagImage.value = image;
-    // return image['image'];
   }
 
   void clearPref() {
     language.changeToDefault();
+    getFlag();
   }
 
   @override

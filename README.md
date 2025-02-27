@@ -1,18 +1,87 @@
 # GetX Change Language App
 
-A new Flutter project.
+Simple Change Language App using GetX State Management, Localization (l10n), Shared Preferences.
 
-## Getting Started
+
+```
+Available Language on this Apps: 
+1. Indonesia
+2. English
+3. Japanese
+4. Korean
+5. Germany
+6. Russian
+
+Flutter Version 3.24.4 Dart Version 3.5.4
+```
 
 ![](https://github.com/Hendri-M/gifs-only/blob/main/language.gif)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## How to Add More Language
+* Create new file in l10n folder
+   ```
+   lib
+   ├───...
+   │
+   └───l10n
+        ├───app_de.arb
+        ├───app_en.arb
+        ├───app_es.arb
+        ├───...
+        └───yours_app_file.arb
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   ```
+  you can copy the values from the previous ```.arb``` file and change the language inside, then run ```flutter gen-l10n``` to generate file ```yours_app_file.arb```.
+* Edit file ```language.dart```
+  ```dart
+  enum Languange{
+    english(Locale('en', 'US'), 'English'),
+    indonesia(Locale('id', 'ID'), 'Indonesia'),
+    ...,
+    // <<--- Add Here --->>
+    yours_app_file(Locale('languange_id', 'country_id'), 'Country Name')
+  }
+  ...
+  ```
+* Add an image, you can add the image in the asset folder
+  ```
+  <root>
+   ├───...
+   │
+   ├───assets
+        ├───image.png
+        ├───...
+        └───yours_image
+  ```
+  then run ```dart run build_runner build --delete-conflicting-outputs``` or ```flutter pub run build_runner build --delete-conflicting-outputs``` for generate AssetsGen when adding new images.
+* Add a language object, this object is used to get an image of each language.
+  ```
+  lib
+   ├───app
+   │     ├───data
+   │     ├───modules
+   │     ├───routes
+   │     └───utils
+   │           ├───...
+   │           ├───language_list.dart
+   │           └───...
+   │
+   └───...
+  ```
+  
+  ```dart
+  import 'package:flutter/widgets.dart';
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    import '../../gen/assets.gen.dart';
+
+    List<Map<String, Object>> languages = [
+    {"id": "english", "text": "English", "image": AssetImage(Assets.unitedKingdom.path)},
+    {"id": "indonesia", "text": "Indonesia", "image": AssetImage(Assets.indonesia.path)},
+    ...
+    // <<- Add Here ->>
+    {"id": "your_lang_id", "text": "your_lang_name", "image": 'call_your_AssetImage_path'},
+    ];
+
+  ```
+  ***id and text must be same values***
