@@ -85,3 +85,8 @@ Flutter Version 3.24.4 Dart Version 3.5.4
 
   ```
   ***id and text must be same values***
+
+
+#### Okay, that's all, run the application
+
+#### Thank you, don't forget the star :star:	 :grin:	
